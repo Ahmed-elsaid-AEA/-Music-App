@@ -16,8 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-  SplashController.navigatorToOnBoardingPage(context: context);
+    SplashController.navigatorToOnBoardingPage(context: context);
   }
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

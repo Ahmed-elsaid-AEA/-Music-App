@@ -21,42 +21,40 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: const Alignment(
-                      AlignmentManagersX.x0_20, AlignmentManagersY.y_0_98),
-                  end: const Alignment(
-                      AlignmentManagersX.x_0_20, AlignmentManagersY.y0_98),
-                  colors: [
-                ColorManagers.kPrimaryColor,
-                ColorManagers.kSecondPrimaryColor.withOpacity(.54)
-              ])),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: HeightValuesManagers.h111,
-              ),
-              const CustomTitleOnBoardingPage(),
-              const SizedBox(
-                height: HeightValuesManagers.h11,
-              ),
-              const CustomSubTitleOnBoardingPage(),
-              const SizedBox(
-                height: HeightValuesManagers.h58,
-              ),
-              CustomButtonOnBoardingPage(
-                  onPressed: () {
-                    OnBoardingController.navigateToHomeScreen(context: context);
-                  }, text: StringsValuesManagers.getStarted),
-              const CustomImageOnBoardingPage(),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: const Alignment(
+                    AlignmentManagersX.x0_20, AlignmentManagersY.y_0_98),
+                end: const Alignment(
+                    AlignmentManagersX.x_0_20, AlignmentManagersY.y0_98),
+                colors: [
+              ColorManagers.kPrimaryColor,
+              ColorManagers.kSecondPrimaryColor.withOpacity(.54)
+            ])),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: HeightValuesManagers.h111,
+            ),
+            const CustomTitleOnBoardingPage(),
+            const SizedBox(
+              height: HeightValuesManagers.h11,
+            ),
+            const CustomSubTitleOnBoardingPage(),
+            const SizedBox(
+              height: HeightValuesManagers.h58,
+            ),
+            CustomButtonOnBoardingPage(
+                onPressed: () {
+                  OnBoardingController.navigateToHomeScreen(context: context);
+                }, text: StringsValuesManagers.getStarted),
+            const CustomImageOnBoardingPage(),
 
-            ],
-          ),
+          ],
         ),
       ),
     );
